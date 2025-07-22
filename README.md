@@ -39,48 +39,34 @@ Follow this only if you're sceptical about running the scary long command from t
 <details>
 <summary><strong>Click to read (OPTIONAL)</strong></summary>
 Here's a manual list of commands with short explanation of the steps to get, build and setup the tool step-by-step:
-
-i. Allow Termux to access shared storage, please allow storage permission when prompted
+i. Allow Termux to access shared storage, please allow storage permission when prompted:
 `termux-setup-storage`
-
-ii. Change to home directory
+ii. Change to home directory:
 `cd`
-
-iii. Update package lists and upgrade all packages, stay connected to data/wifi when running this
+iii. Update package lists and upgrade all packages, stay connected to data/wifi when running this:
 `pkg update -y`
 `pkg upgrade -y`
-
-iv. Install Git and .NET SDK 8.0, stay connected to data/wifi when running this
+iv. Install Git and .NET SDK 8.0, stay connected to data/wifi when running this:
 `pkg install git dotnet-sdk-8.0 -y`
-
-v. Clone the Deltarune Save Converter repository from GitHub, stay connected to data/wifi when running this
+v. Clone the Deltarune Save Converter repository from GitHub, stay connected to data/wifi when running this:
 `git clone https://github.com/InvoxiPlayGames/DeltaruneSaveConverter`
-
-vi. Change into the cloned repository directory
+vi. Change into the cloned repository directory:
 `cd DeltaruneSaveConverter`
-
-vii. Build the .NET solution in the repository
+vii. Build the .NET solution in the repository:
 `dotnet build DeltaruneSaveConverter.sln`
-
-viii. Create a directory to store the built converter tool
+viii. Create a directory to store the built converter tool:
 `mkdir -p ~/DRSaveConverter`
-
-ix. Copy all built files to the new directory (ensuring it overwrites existing files for updating purposes, if any)
+ix. Copy all built files to the new directory (ensuring it overwrites existing files for updating purposes, if any):
 `cp -a --remove-destination bin/Debug/net8.0/* ~/DRSaveConverter`
-
-x. Return to home directory
+x. Return to home directory:
 `cd`
-
-xi. Remove the cloned GitHub repository to clean up
+xi. Remove the cloned GitHub repository to clean up:
 `rm -rf DeltaruneSaveConverter`
-
-xii. Add the converter tool directory to PATH in .bashrc
+xii. Add the converter tool directory to PATH in .bashrc:
 `echo "export PATH=\$PATH:~/DRSaveConverter" >> ~/.bashrc`
-
-xiii. Add a shortcut alias for running the tool
+xiii. Add a shortcut alias for running the tool:
 `echo "alias drsave='DeltaruneSaveConverter'" >> ~/.bashrc`
-
-xiv. Reload the updated .bashrc
+xiv. Reload the updated .bashrc:
 `source ~/.bashrc`
 </details>
 
