@@ -29,7 +29,7 @@ We'll be setting up the converter on our Android device now. This is a one-time 
 ## Method 1: Automatic Installation (recommended)
 Open termux and paste the following long command and press enter.
 ```bash
-termux-setup-storage; cd; pkg up -y; pkg in git dotnet-sdk-8.0 -y; r=DeltaruneSaveConverter; git clone https://github.com/InvoxiPlayGames/$r; cd $r; dotnet build *.sln; d=~/DRSaveConverter; rm -rf $d; mkdir -p $d; cp -a bin/Debug/net8.0/* $d; cd; rm -rf $r; b=~/.bashrc; echo "export PATH=\$PATH:$d" >>$b; echo "alias drsave=$r" >>$b; . $b
+termux-setup-storage; cd; pkg up -y; pkg in git dotnet-sdk-8.0 dotnet8.0 -y; r=DeltaruneSaveConverter; git clone https://github.com/InvoxiPlayGames/$r; cd $r; dotnet build *.sln; d=~/DRSaveConverter; rm -rf $d; mkdir -p $d; cp -a bin/Debug/net8.0/* $d; cd; rm -rf $r; b=~/.bashrc; echo "export PATH=\$PATH:$d" >>$b; echo "alias drsave=$r" >>$b; . $b
 ```
 Allow storage permission when prompted. Stay connected to data/wifi when running this.
 > [!TIP]
@@ -51,7 +51,7 @@ iii. Update package lists and upgrade all packages, stay connected to data/wifi 
 `pkg upgrade -y`
 
 iv. Install Git and .NET SDK 8.0, stay connected to data/wifi when running this:
-`pkg install git dotnet-sdk-8.0 -y`
+`pkg install git dotnet-sdk-8.0 dotnet8.0 -y`
 
 v. Clone the Deltarune Save Converter repository from GitHub, stay connected to data/wifi when running this:
 `git clone https://github.com/InvoxiPlayGames/DeltaruneSaveConverter`
