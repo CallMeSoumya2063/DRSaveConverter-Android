@@ -50,7 +50,7 @@ iii. Update package lists and upgrade all packages, stay connected to data/wifi 
 `pkg update -y`
 `pkg upgrade -y`
 
-iv. Install Git and .NET SDK 8.0, stay connected to data/wifi when running this:
+iv. Install Git, .NET 8.0 and .NET SDK 8.0, stay connected to data/wifi when running this:
 `pkg install git dotnet-sdk-8.0 dotnet8.0 -y`
 
 v. Clone the Deltarune Save Converter repository from GitHub, stay connected to data/wifi when running this:
